@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom SK8</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div>
+        <nav id="menu">
+            <ul>
+                <div class="container">
+                    <input type="checkbox" id="checkbox-menu">
+                    <label for="checkbox-menu" onclick="toggle()">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </label>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Blog</a></li>
+                <h2>FREEDOM</h2>
+                <li><a href="#">Club</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="colapse">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Club</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="main">
+        <div id="spcmain">
+            <h4>skateboarding is a art, skateboarding is a life</h4>
+            <h2>BEYOND THE LIMITS</h2>
+        </div>
+        <input type="button" value="LET'S GO" id="btn">
+    </div>
+</body>
+<script>
+    var animation = false
+    function toggle(){
+        var element = document.querySelector(".colapse")
+        element.classList.toggle("show")
+        animation = !animation
+        if (animation){
+            element.classList.remove("scale-out-tl")
+            element.classList.add("scale-in-tl")
+
+        }else{
+            element.classList.remove("scale-in-tl")
+            element.classList.add("scale-out-tl")
+        }
+    }
+</script>
+</html>
